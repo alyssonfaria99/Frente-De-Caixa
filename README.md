@@ -44,7 +44,7 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
    
 1. Clone o repositório
    ```bash
-   git clone https://github.com/alyssonfaria99/Ponto-De-Venda.git
+   git clone https://github.com/alyssonfaria99/Frente-De-Caixa.git
    cd Ponto-De-Venda
 
 2. Instale as dependências
