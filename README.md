@@ -47,7 +47,7 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
 
 2. Instale as dependências
    ```bash
-      npm install
+   npm install
 
 3. Configura as variáveis de ambiente criando um arquivo .env na raíz do projeto, seguindo o exemplo:
    ```bash
@@ -67,4 +67,5 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
    MAIL_PASS=your_email_password
    MAIL_FROM=your_email@example.com
    SENHA_JWT=your_jwt_secret
->>>>>>> master
+
+4. Utilize o arquivo schema.sql para criar o banco de dados em um ambiente PostgreSQL
