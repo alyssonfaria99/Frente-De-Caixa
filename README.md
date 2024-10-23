@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # Frente-De-Caixa
-=======
+
 # PDV API (Frente de Caixa)
 
 ## Descrição do Projeto
@@ -45,7 +44,6 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
    ```bash
    git clone https://github.com/alyssonfaria99/Ponto-De-Venda.git
    cd Ponto-De-Venda
-   cd '.\Projeto Final\desafio-backend-modulo-05-sistema-pdv-dbe-b2b-t07-ifood\'
 
 2. Instale as dependências
    ```bash
@@ -57,10 +55,16 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
    DB_PORT=5432
    DB_USER=seuusuario
    DB_PASSWORD=suasenha
-   DB_NAME=pdv
-   JWT_SECRET=sua_chave_secreta
-   EMAIL_USER=seuemail@example.com
-   EMAIL_PASS=suasenha
-   STORAGE_API_URL=https://api.armazem.com
-   STORAGE_API_KEY=sua_api_key
+   DB_DATABASE=your_database
+   PORT=3000
+   ENDPOINT_S3=https://your_s3_endpoint
+   KEY_ID=your_key_id
+   APP_KEY=your_app_key
+   BACKBLAZE_BUCKET=your_backblaze_bucket
+   MAIL_HOST=smtp.example.com
+   MAIL_PORT=587
+   MAIL_USER=your_email@example.com
+   MAIL_PASS=your_email_password
+   MAIL_FROM=your_email@example.com
+   SENHA_JWT=your_jwt_secret
 >>>>>>> master
