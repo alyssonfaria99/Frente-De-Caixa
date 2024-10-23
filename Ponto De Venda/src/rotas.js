@@ -14,25 +14,24 @@ const multer = require('./servicos/multer');
 
 const rotas = express();
 
-rotas.post("/usuario", validarCorpoRequisicao.validarCorpoRequisicao(schemaUsuario), cadastrarUsuario);
-rotas.get("/categorias", listarCategorias);
+rotas.post("/cadastrarUsuario", validarCorpoRequisicao.validarCorpoRequisicao(schemaUsuario), cadastrarUsuario);
 rotas.post("/login", validarCorpoRequisicao.validarCorpoRequisicao(schemaLogin), login);
+rotas.get("/categorias", listarCategorias);
 
 rotas.use(verificarUsuarioLogado);
 
 rotas.get("/usuario", detalharUsuario);
-rotas.put("/usuario", validarCorpoRequisicao.validarCorpoRequisicao(schemaUsuario), editarPerfilUsuarioLogado);
-
-rotas.post("/produto", validarCorpoRequisicao.validarCorpoRequisicaoComImagem(schemaProduto), multer.single('produto_imagem'), cadastrarProduto);
-rotas.put("/produto/:id", validarCorpoRequisicao.validarCorpoRequisicaoComImagem(schemaProduto), multer.single('produto_imagem'), editarProduto);
-rotas.get("/produto", listarProdutos);
+rotas.put("/editarUsuario", validarCorpoRequisicao.validarCorpoRequisicao(schemaUsuario), editarPerfilUsuarioLogado);
+rotas.post("/cadastrarProduto", validarCorpoRequisicao.validarCorpoRequisicaoComImagem(schemaProduto), multer.single('produto_imagem'), cadastrarProduto);
+rotas.put("/editarProduto/:id", validarCorpoRequisicao.validarCorpoRequisicaoComImagem(schemaProduto), multer.single('produto_imagem'), editarProduto);
+rotas.get("/produtos", listarProdutos);
 rotas.get("/produto/:id", detalharProduto);
-rotas.delete("/produto/:id", excluirProduto);
-rotas.post("/cliente", validarCorpoRequisicao.validarCorpoRequisicao(schemaCliente), cadastrarCliente);
-rotas.put("/cliente/:id", validarCorpoRequisicao.validarCorpoRequisicao(schemaCliente), editarCliente);
-rotas.get("/cliente", listarClientes);
+rotas.delete("/excluirProduto/:id", excluirProduto);
+rotas.post("/cadastrarCliente", validarCorpoRequisicao.validarCorpoRequisicao(schemaCliente), cadastrarCliente);
+rotas.put("/editarCliente/:id", validarCorpoRequisicao.validarCorpoRequisicao(schemaCliente), editarCliente);
+rotas.get("/clientes", listarClientes);
 rotas.get("/cliente/:id", detalharCliente);
-rotas.post("/pedido", cadastrarPedido);
-rotas.get("/pedido", listarPedidos);
+rotas.post("/cadastrarPedido", cadastrarPedido);
+rotas.get("/pedidos", listarPedidos);
 
 module.exports = rotas;
