@@ -123,21 +123,30 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
   - **Endpoint**: `GET /usuario`
   
   - **Descrição**: Retorna as informações do usuário logado.
-  
-  - **Corpo da Requisição:**
-    
-           {
-         	   "email": "alysson123@gmail.com",
-         	   "senha": "12345"
-           }
 
+  - **Resposta**:
+    
+        {
+         	"id": 1,
+         	"nome": "Alysson Faria Santos",
+         	"email": "alysson123@gmail.com"
+        }
   
 </details>
 <details>
   <summary>Editar Usuário Logado</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `PUT /editarUsuario`
+  
+  - **Descrição**: Modifica informações do usuário logado.
+  
+  - **Corpo da Requisição:**
+    
+           {
+                   "nome": "Alysson Faria Santos",
+         	   "email": "alysson456@gmail.com",
+         	   "senha": "567890"
+           }
   
 </details>
 <details>
