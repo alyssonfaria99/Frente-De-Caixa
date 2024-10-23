@@ -27,10 +27,12 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
 - Aplicação de regras para impedir a exclusão de produtos vinculados a pedidos.
 
 ## Tecnologias Utilizadas
-- **Node.js**: Para desenvolvimento da API.
+- **Node.js / Express**: Para desenvolvimento da API.
 - **PostgreSQL**: Para gerenciamento do banco de dados.
 - **JWT (JSON Web Token)**: Para autenticação dos usuários.
 - **Bcrypt**: Para criptografia de senhas.
+- **Joi**: Para criação de schemas de validação.
+- **Knex**: Para construir consultas SQL utilizando JavaScript.
 - **Nodemailer**: Para envio de emails.
 - **Serviços de Armazenamento (Blackblaze)**: Para upload de imagens de produtos.
 
