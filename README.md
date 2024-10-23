@@ -76,22 +76,60 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
 <details>
   <summary>Cadastrar Usuário</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `POST /cadastrarUsuario`
+  
+  - **Descrição**: Cadastra um novo usuário no banco de dados.
+  
+  - **Corpo da Requisição:**
+    
+           {
+         	   "nome": "Alysson",
+         	   "email": "alysson123@gmail.com",
+         	   "senha": "12345"
+           }
   
 </details>
 <details>
   <summary>Login</summary>
+   
+  - **Endpoint**: `POST /login`
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Descrição**: Verifica as credenciais, realiza o login e gera um token de autenticação.
+  
+  - **Corpo da Requisição:**
+    
+           {
+         	   "email": "alysson123@gmail.com",
+         	   "senha": "12345"
+           }
+  
+  - **Resposta:**
+    
+         {
+         	"usuario": {
+         		"id": 1,
+         		"nome": "Alysson",
+         		"email": "alysson123@gmail.com"
+         	},
+         	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI5NjkyMjMyLCJleHAiOjE3MzAyMTA2MzJ9.nwazOjYS9NLyzk31__NmxB0SWZmc1WQ5_v5dUDrEUlI"
+         }
+        
   
 </details>
 <details>
   <summary>Detalhar Usuário Logado</summary>
+   
+  - **Endpoint**: `GET /usuario`
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Descrição**: Retorna as informações do usuário logado.
+  
+  - **Corpo da Requisição:**
+    
+           {
+         	   "email": "alysson123@gmail.com",
+         	   "senha": "12345"
+           }
+
   
 </details>
 <details>
