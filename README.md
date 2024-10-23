@@ -71,3 +71,118 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
    SENHA_JWT=your_jwt_secret
 
 4. Utilize o arquivo schema.sql para criar o banco de dados em um ambiente PostgreSQL
+
+## ENDPOINTS
+<details>
+  <summary>Cadastrar Usuário</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Login</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Detalhar Usuário Logado</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Editar Usuário Logado</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Cadastrar Produto</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Listar Produtos por Categoria</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Detalhar Produto por ID</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Editar Produto</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Excluir Produto</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Cadastrar Cliente</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Listar Clientes</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Detalhar Cliente por ID</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Editar Cliente</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Cadastrar Pedido</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Listar Pedidos</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+<details>
+  <summary>Listar Categorias</summary>
+  
+  - Descrição detalhada da primeira funcionalidade.
+  - Passos para usar.
+  
+</details>
+
