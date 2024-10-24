@@ -159,78 +159,296 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
 <details>
   <summary>Listar Produtos por Categoria</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `GET /produto?categoria_id`
+  
+  - **Descrição**: Lista todos os produtos associados a uma categoria.
+
+  - **Resposta**:
+    
+         [
+         	{
+         		"id": 2,
+         		"descricao": "preto",
+         		"quantidade_estoque": 7,
+         		"valor": "800000.00",
+         		"categoria_id": 1,
+         		"produto_imagem": null
+         	},
+         	{
+         		"id": 3,
+         		"descricao": "vermelho",
+         		"quantidade_estoque": 2,
+         		"valor": "300000.00",
+         		"categoria_id": 1,
+         		"produto_imagem": null
+         	}
+         ]
   
 </details>
 <details>
   <summary>Detalhar Produto por ID</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `GET /produto/:id`
+  
+  - **Descrição**: Retorna as informações do produto com o ID especificado.
+
+  - **Resposta**:
+    
+         {
+         	"id": 1,
+         	"descricao": "ok",
+         	"quantidade_estoque": 190,
+         	"valor": "50001.00",
+         	"categoria_id": 3,
+         	"produto_imagem": null
+         }
   
 </details>
 <details>
   <summary>Editar Produto</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `PUT /editarProduto/:id`
+  
+  - **Descrição**: Edita o produto com o ID especificado.
+
+  - **Exemplo de corpo de requisição**:
+    
+        {
+         	"descricao": "camisa ",
+         	"quantidade_estoque": "0",
+         	"valor": "20000",
+         	"categoria_id": "7"
+         }
   
 </details>
 <details>
   <summary>Excluir Produto</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `DELETE /excluirProduto/:id`
+  
+  - **Descrição**: Exclui o produto com o ID especificado.
+
+  - **Resposta**:
+    
+        "Produto excluído com sucesso"
   
 </details>
 <details>
   <summary>Cadastrar Cliente</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `POST /cadastrarCliente`
+  
+  - **Descrição**: Cadastra um novo cliente com email e CPF únicos.
+
+  - **Exemplo de corpo de requisição**:
+    
+         {
+         	"nome": "Alysson",
+         	"email": "alyssonfaria99@gmail.com",
+         	"cpf":"12345678900",
+         	"cep":"35636104",
+         	"rua":"Rua José Lucas Gontijo",
+         	"numero":"69",
+         	"bairro":"São Lucas",
+         	"cidade":"Bom Despacho",
+         	"estado":"MG"
+         }
   
 </details>
 <details>
   <summary>Listar Clientes</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+
+  - **Endpoint**: `GET /clientes`
+  
+  - **Descrição**: Lista todos os clientes.
+
+  - **Resposta**:
+    
+           {
+         	"clientes": [
+         		{
+         			"id": 1,
+         			"nome": "Alysson",
+         			"email": "alysson123456@gmail.com",
+         			"cpf": "13122233343",
+         			"cep": "35636104",
+         			"rua": "Rua José Lucas Gontijo",
+         			"numero": "69",
+         			"bairro": "São Lucas",
+         			"cidade": "Bom Despacho",
+         			"estado": "MG"
+         		},
+         		{
+         			"id": 2,
+         			"nome": "Alysson",
+         			"email": "alyssonfaria99@gmail.com",
+         			"cpf": "12345678900",
+         			"cep": "35636104",
+         			"rua": "Rua José Lucas Gontijo",
+         			"numero": "69",
+         			"bairro": "São Lucas",
+         			"cidade": "Bom Despacho",
+         			"estado": "MG"
+         		}
+         	]
+         }
   
 </details>
 <details>
   <summary>Detalhar Cliente por ID</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `GET /cliente/:id`
+  
+  - **Descrição**: Retorna informações do cliente com o ID especificado.
+
+  - **Resposta**:
+    
+        {
+      	"cliente": {
+      		"id": 1,
+      		"nome": "Alysson",
+      		"email": "alysson123456@gmail.com",
+      		"cpf": "13122233343",
+      		"cep": "35636104",
+      		"rua": "Rua José Lucas Gontijo",
+      		"numero": "69",
+      		"bairro": "São Lucas",
+      		"cidade": "Bom Despacho",
+      		"estado": "MG"
+      	}
+        }
   
 </details>
 <details>
   <summary>Editar Cliente</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `PUT /editarCliente/:id`
+  
+  - **Descrição**: Altera dados do cliente com o ID especificado.
+
+  - **Exemplo de corpo de requisição**:
+    
+         {
+         	"nome": "Alysson",
+         	"email": "alysson123456@gmail.com",
+         	"cpf":"13122233343"
+         }
   
 </details>
 <details>
   <summary>Cadastrar Pedido</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `POST /cadastrarPedido`
+  
+  - **Descrição**: Cadastra um novo pedido vinculado a um cliente existente.
+
+  - **Exemplo de corpo de requisição**:
+    
+         {
+             "cliente_id": 1,
+             "observacao": "Em caso de ausência recomendo deixar com algum vizinho",
+             "pedido_produtos": [
+                 {
+                     "produto_id": 1,
+                     "quantidade_produto": 10
+                 }
+             ]
+         }
   
 </details>
 <details>
   <summary>Listar Pedidos</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `GET /pedidos?cliente_id`
+  
+  - **Descrição**: Retorna todos os pedidos associados a um cliente.
+
+  - **Resposta**:
+    
+            [
+            	{
+            		"pedido": {
+            			"id": 1,
+            			"cliente_id": 1,
+            			"observacao": "Em caso de ausência recomendo deixar com algum vizinho",
+            			"valor_total": "500010.00"
+            		},
+            		"pedidoProduto": [
+            			{
+            				"pedido_id": 1,
+            				"produto_id": 1,
+            				"quantidade_produto": 10,
+            				"valor_produto": "50001.00"
+            			}
+            		]
+            	},
+            	{
+            		"pedido": {
+            			"id": 2,
+            			"cliente_id": 1,
+            			"observacao": "Entregar somente para o destinatário",
+            			"valor_total": "100250.00"
+            		},
+            		"pedidoProduto": [
+            			{
+            				"pedido_id": 2,
+            				"produto_id": 3,
+            				"quantidade_produto": 5,
+            				"valor_produto": "20050.00"
+            			}
+            		]
+            	}
+             ]
   
 </details>
 <details>
   <summary>Listar Categorias</summary>
   
-  - Descrição detalhada da primeira funcionalidade.
-  - Passos para usar.
+  - **Endpoint**: `GET /categorias`
+  
+  - **Descrição**: Retorna todas as categorias de produtos.
+
+  - **Resposta**:
+    
+         [
+         	{
+         		"id": 1,
+         		"descricao": "Informática"
+         	},
+         	{
+         		"id": 2,
+         		"descricao": "Celulares"
+         	},
+         	{
+         		"id": 3,
+         		"descricao": "Beleza e Perfumaria"
+         	},
+         	{
+         		"id": 4,
+         		"descricao": "Mercado"
+         	},
+         	{
+         		"id": 5,
+         		"descricao": "Livros e Papelaria"
+         	},
+         	{
+         		"id": 6,
+         		"descricao": "Brinquedos"
+         	},
+         	{
+         		"id": 7,
+         		"descricao": "Moda"
+         	},
+         	{
+         		"id": 8,
+         		"descricao": "Bebê"
+         	},
+         	{
+         		"id": 9,
+         		"descricao": "Games"
+         	}
+         ]
   
 </details>
 
