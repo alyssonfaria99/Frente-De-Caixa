@@ -118,7 +118,7 @@ Este projeto consiste na criação de uma API para um sistema de PDV (Frente de 
   
 </details>
 
-A partir do Login, todas as rotas necessitam do token de autorização para serem processadas. O token é passado no formato Bearer Token.
+A partir do Login, todas as rotas necessitam do token de autenticação para serem processadas. O token é passado no formato Bearer Token.
 <details>
   <summary>Detalhar Usuário Logado</summary>
    
